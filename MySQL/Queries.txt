@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS Reviews;
+
+USE Reviews;
+
+CREATE TABLE IF NOT EXISTS Reviews_table(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nickname VARCHAR(50) NOT NULL,
+    description TEXT NOT NULL,
+    assortment_rating INT NOT NULL,
+    service_rating INT NOT NULL,
+    decor_rating INT NOT NULL);
