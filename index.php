@@ -41,6 +41,7 @@
             </datalist><br></br>
             <textarea id="review" name="review" placeholder="Say something about us!"></textarea><br></br>
             <button type="button" onClick="sendReview()">Send review</button>
+            <button type="button" onclick="window.location.href='login.html'">Log in</button>
             </form>
         </div>
 
