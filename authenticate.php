@@ -23,7 +23,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         exit();
     }
     else{
-        echo "Invalid credentials.";
+        echo "Invalid credentials. $password";
     }
 }
 else{

@@ -4,6 +4,7 @@
         <meta charset="UTTF-8">
         <meta name="viewport" content="width=device-width, inital-scale=1.0"> 
         <title>Review our Radiowęzeł!</title>
+        <script src="javascript.js"> </script>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -51,7 +52,41 @@
             <div id="response"></div>
             <div class="reviewContainer">
                 <!-- PLACEHOLDER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                    <div class="reviewView">
+
+                <?php
+                    $dbConnection=new mysqli('localhost', 'root','','reviews');
+
+                    if($dbConnection->connect_error){
+                        die("Connection Error: ".$dbConnection->connect_error);
+                    }
+                    
+                    $query="SELECT * FROM Reviews_table";
+                    $result =$dbConnection->query($query);
+
+                    if($result->num_rows>0){
+                        while ($row = $result->fetch_assoc()){
+                            $year=substr($row['date'],2,2);
+                            $month=substr($row['date'],5,2);
+                            $day=substr($row['date'],8,2);
+                            $hour=substr($row['time'],0,5);
+                       echo "<div class='reviewView'>";
+                       echo "<div class='reviewHeader'>";
+                           echo "<div class='reviewNick'>".$row['nickname']." $day/$month/$year $hour</div>";
+                           echo "<div class='reviewRates'>Asortyment: ".$row['assortment_rating']." Serwis: ".$row['service_rating']." Wsytroj: ".$row['decor_rating']."</div>";
+                        echo "</div>";
+                        echo "<p><div class='reviewDesc'>Opis: ".$row['description'];
+                        echo "</div></p>";
+                    echo "</div>";
+                        }
+                    }
+                    else{
+                        echo "No reviews yet.";
+                    }
+                    $dbConnection->close();
+                ?>
+
+
+                    <!-- <div class="reviewView">
                         <div class="reviewHeader">
                             <div class="reviewNick">Imie</div> 
                             <div class="reviewRates">Asortyment: $ocena Serwis: $ocena Wsytroj: $ocena</div>
@@ -98,9 +133,8 @@
                                                     A wszystko przepasane jakby wstęgą, miedzą
                                                     Zieloną, na niej zrzadka ciche grusze siedzą
                         </div></p>
-                    </div>
+                    </div> -->
             </div>
         </div>
-        <script src="javascript.js"></script>
     </body>
 </html>
