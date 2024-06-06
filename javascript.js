@@ -20,3 +20,20 @@ function sendReview() {
         responseDiv.innerHTML = '<p style="color:red;">An error occurred: ' + error.message + '</p>';
     });
 }
+
+function deleteReview(id){
+    fetch(`delete_review.php?id=${id}`, {
+        method: 'GET',
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.message);
+        if (data.status === 'success') {
+            const row = document.getElementById(`row-${id}`);
+            row.parentNode.removeChild(row);
+        } else {
+            console.error('Error: ', data.message);
+        }
+    })
+    .catch(error => console.error('Error: ', error));
+}

@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body{
     font-family: Arial, sans-serif;
     background-color: #1a1a1a;
@@ -13,6 +19,15 @@ body{
     margin: 40px;
 }
 
+.loginContainer{
+    text-align: center;
+    width: 700px;
+    background-color: white;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .container{
     text-align: center;
     width: 700px;
@@ -25,12 +40,12 @@ body{
 
 .reviewContainer{
     text-align:center;
-    width: 800px;
+    width: 900px;
     max-height: 700px;
     overflow-y: auto;
     background-color: white;
     margin: 40px;
-    padding: 20px;
+    padding-top: 120px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -40,7 +55,7 @@ body{
 
 .reviewView{
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     text-align: left;
     background-color: #f9f9f9;
     padding: 10px;
@@ -68,7 +83,6 @@ body{
 
 .reviewDesc{
     text-align: left;
-    margin-top: 10px;
 }
 
 #review{

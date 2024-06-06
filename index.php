@@ -45,7 +45,7 @@
                     <textarea id="review" name="review" placeholder="Type.."></textarea><br></br>
                     <sup>* - required</sup><br></br>
                     <button type="button" onClick="sendReview()">Send review</button>
-                    <button type="button" onClick="window.location.href='login.html'">Login</button>
+                    <button type="button" onClick="window.location.href='login.html'">Log In</button>
                 </form>
             </div>
             <div id="response"></div>
@@ -54,7 +54,7 @@
                     <div class="reviewView">
                         <div class="reviewHeader">
                             <div class="reviewNick">Imie</div> 
-                            <div class="reviewRates">Asortyment: $ocena Serwis: $ocena Wsytroj: $ocena</div>
+                            <div class="reviewRates">Asortyment: $ocena Serwis: $ocena Wystroj: $ocena</div>
                         </div>
                         <p><div class="reviewDesc">Opis: Imma git init JAKIES RANDOMOWE SLOWA ZEBYS ZOABCZYL ZE SCROLL DZIALA AEAEAEAEAEAEOOEOEOEOEOEOAOEOAEOAOEOAEOAOEAOEOAEOAEOE JSHDJSDHJSHDJSHDJSDHJS SJHDJSDHJSHDSJHDJSHDJSHDJSHDJSHD
                         </div></p>
@@ -63,7 +63,7 @@
                     <div class="reviewView">
                         <div class="reviewHeader">
                             <div class="reviewNick">Ragro</div> 
-                            <div class="reviewRates">Asortyment: 3 Serwis: 2 Wsytroj: 1</div>
+                            <div class="reviewRates">Asortyment: 3 Serwis: 2 Wystroj: 1</div>
                         </div>
                         <p><div class="reviewDesc">Opis: Moim zdaniem to nie ma tak, że dobrze albo że nie dobrze. Gdybym miał powiedzieć, co cenię w życiu najbardziej, powiedziałbym, że ludzi. Ekhm… Ludzi, którzy podali mi pomocną dłoń, kiedy sobie nie radziłem, kiedy byłem sam. I co ciekawe, to właśnie przypadkowe spotkania wpływają na nasze życie. Chodzi o to, że kiedy wyznaje się pewne wartości, nawet pozornie uniwersalne, bywa, że nie znajduje się zrozumienia, które by tak rzec, które pomaga się nam rozwijać. Ja miałem szczęście, by tak rzec, ponieważ je znalazłem. I dziękuję życiu. Dziękuję mu, życie to śpiew, życie to taniec, życie to miłość. Wielu ludzi pyta mnie o to samo, ale jak ty to robisz? Skąd czerpiesz tę radość? A ja odpowiadam, że to proste, to umiłowanie życia, to właśnie ono sprawia, że dzisiaj na przykład buduję maszyny, a jutro… kto wie, dlaczego by nie, oddam się pracy społecznej i będę ot, choćby sadzić… znaczy… marchew.
                         </div></p>
@@ -72,7 +72,7 @@
                     <div class="reviewView">
                         <div class="reviewHeader">
                             <div class="reviewNick">Gaja</div> 
-                            <div class="reviewRates">Asortyment: 2 Serwis: 1 Wsytroj: 37</div>
+                            <div class="reviewRates">Asortyment: 2 Serwis: 1 Wystroj: 37</div>
                         </div>
                         <p><div class="reviewDesc"> Litwo, Ojczyzno moja! ty jesteś jak zdrowie;
                                                     Ile cię trzeba cenić, ten tylko się dowie,
