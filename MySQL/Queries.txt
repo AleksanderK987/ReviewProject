@@ -8,4 +8,13 @@ CREATE TABLE IF NOT EXISTS Reviews_table(
     description TEXT NOT NULL,
     assortment_rating INT NOT NULL,
     service_rating INT NOT NULL,
-    decor_rating INT NOT NULL);
+    decor_rating INT NOT NULL,
+    date DATETIME NOT NULL);
+
+CREATE TABLE IF NOT EXISTS users(
+	user_id INT AUTO_INCREMENT PRIMARY KEY, 
+	username VARCHAR(50) NOT NULL,
+	password VARCHAR(255) NOT NULL);
+
+REPLACE INTO users (user_id, username, password)
+VALUES (1, "Admin", "Admin");
