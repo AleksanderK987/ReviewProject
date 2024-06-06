@@ -10,6 +10,7 @@ if ($dbConnection->connect_error){
 if(isset($_POST['username']) && isset($_POST['password'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $password=password_hash($password,PASSWORD_DEFAULT);
 
     //hashing passwords could be added
     $query="SELECT * FROM users WHERE username='$username' AND password='$password'";
@@ -22,7 +23,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         exit();
     }
     else{
-        echo "Invalid credentials.";
+        echo "Invalid credentials. $password";
     }
 }
 else{

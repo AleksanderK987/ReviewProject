@@ -13,10 +13,13 @@
         $assortment_rating = $_POST['assortment'];
         $service_rating = $_POST['service'];
         $decor_rating = $_POST['decor'];
+
+        $date=date("y-m-d");
+        $time=date("H:i:s");
         
         $description = $_POST['review'];
         if($_POST['review']==NULL) $description='No description was given.';
-        $query = "INSERT INTO reviews_table (nickname, description, assortment_rating, service_rating, decor_rating) VALUES ('$nickname','$description','$assortment_rating','$service_rating','$decor_rating');";
+        $query = "INSERT INTO reviews_table (nickname, description, assortment_rating, service_rating, decor_rating, date, time) VALUES ('$nickname','$description','$assortment_rating','$service_rating','$decor_rating','$date','$time');";
 
         if($dbConnection->query($query)===TRUE){
             $response =array ('status' => 'success','message'=> 'New record has been added.');
