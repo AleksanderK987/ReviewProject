@@ -9,7 +9,8 @@ CREATE TABLE IF NOT EXISTS Reviews_table(
     assortment_rating INT NOT NULL,
     service_rating INT NOT NULL,
     decor_rating INT NOT NULL,
-    date DATETIME NOT NULL);
+    date DATE NOT NULL,
+    time TIME NOT NULL);
 
 CREATE TABLE IF NOT EXISTS users(
 	user_id INT AUTO_INCREMENT PRIMARY KEY, 

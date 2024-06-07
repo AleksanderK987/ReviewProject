@@ -60,7 +60,7 @@
                         die("Connection Error: ".$dbConnection->connect_error);
                     }
                     
-                    $query="SELECT * FROM Reviews_table";
+                    $query="SELECT * FROM Reviews_table ORDER BY date DESC, time DESC";
                     $result =$dbConnection->query($query);
 
                     if($result->num_rows>0){
