@@ -8,11 +8,10 @@ function sendReview() {
     })
     .then(response => response.json())
     .then(data => {
-        
         const responseDiv = document.getElementById('response');
         if (data.status === 'success') {
             window.location.reload();
-            //responseDiv.innerHTML = '<p style="color:green;">' + data.message + '</p>';
+            // responseDiv.innerHTML = '<p style="color:green;">' + data.message + '</p>';
         } else {
             responseDiv.innerHTML = '<p style="color:red;">' + data.message + '</p>';
         }
@@ -21,4 +20,19 @@ function sendReview() {
         const responseDiv = document.getElementById('response');
         responseDiv.innerHTML = '<p style="color:red;">An error occurred: ' + error.message + '</p>';
     });
+}
+
+function deleteReview(id){
+    fetch(`delete_records.php?id=${id}`, {
+        method: 'POST',
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            window.location.reload();
+        } else {
+            console.error('Error: ', data.message);
+        }
+    })
+    .catch(error => console.error('Error: ', error));
 }
