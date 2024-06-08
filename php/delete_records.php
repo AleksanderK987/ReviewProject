@@ -6,7 +6,7 @@ $dbConnection = new mysqli('localhost','root','','reviews');
 if ($dbConnection->connect_error){
     die("Connection Error: ".$dbConnection->connect_error);
 }
-
+// deleting the record with the specified id 
 if(isset($_GET['id'])){
     $id=intval($_GET['id']);
 

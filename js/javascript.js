@@ -1,8 +1,9 @@
+//function to send reviews to database
 function sendReview() {
     const form = document.getElementById('form');
     const formData = new FormData(form);
 
-    fetch('sending.php', {
+    fetch('php/sending.php', {
         method: 'POST',
         body: formData
     })
@@ -20,8 +21,9 @@ function sendReview() {
     });
 }
 
+//function to delete reviews
 function deleteReview(id){
-    fetch(`delete_records.php?id=${id}`, {
+    fetch(`../php/delete_records.php?id=${id}`, {
         method: 'POST',
     })
     .then(response => response.json())

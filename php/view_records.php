@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews</title>
-    <script src="javascript.js"></script>
-    <link rel="stylesheet" href="css/viewRecords.css">
+    <script src="../js/javascript.js"></script>
+    <link rel="stylesheet" href="../css/viewRecords.css">
 </head>
 <body>
 <div class="container">
@@ -13,7 +13,7 @@
 session_start();
 
 if(!isset($_SESSION['username'])){
-    header("Location: login.html");
+    header("Location: ../login.html");
     exit();
 }
 
@@ -22,7 +22,7 @@ $dbConnection=new mysqli('localhost', 'root','','reviews');
 if($dbConnection->connect_error){
     die("Connection Error: ".$dbConnection->connect_error);
 }
-
+// Use prepared statements to avoid SQL injection
 $query="SELECT * FROM reviews_table";
 $result =$dbConnection->query($query);
 
@@ -47,7 +47,7 @@ if($result->num_rows>0){
 else{
     echo "No record found.";
 }
-
+// Close the database connection
 $dbConnection->close();
 ?>
 </div>
