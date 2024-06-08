@@ -32,7 +32,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
         echo "Invalid credentials. $password";
     }
     }
-    else{ "Invalid credentuals.";
+    else{ "Invalid credentials.";
     }
 
     $query->close();

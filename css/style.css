@@ -4,11 +4,14 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
+html, body {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
 }
 
 .wrapper {
@@ -19,7 +22,7 @@ body{
     margin: 40px;
 }
 
-.loginContainer{
+.loginContainer {
     text-align: center;
     width: 700px;
     background-color: white;
@@ -28,7 +31,7 @@ body{
     border-radius: 10px;
 }
 
-.container{
+.container {
     text-align: center;
     width: 700px;
     height: 700px;
@@ -38,64 +41,62 @@ body{
     border-radius: 10px;
 }
 
-.reviewContainer{
-    text-align:center;
+.reviewContainer {
+    text-align: center;
     width: 900px;
     max-height: 700px;
     overflow-y: auto;
     background-color: white;
     margin: 40px auto;
-    padding: 20px;
+    padding: 20px 50px 20px 50px;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
 
-.reviewView{
+.reviewView {
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
     text-align: left;
     background-color: #f9f9f9;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-    margin-top: 10px;
-    word-wrap:break-word;
+    word-wrap: break-word;
 }
 
-.reviewHeader{
+.reviewHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.reviewNick{
+.reviewNick {
     flex: 1;
     font-weight: bold;
 }
 
-.reviewRates{
-    flex:2;
+.reviewRates {
+    flex: 2;
     text-align: right;
 }
 
-.reviewDesc{
+.reviewDesc {
     text-align: left;
 }
 
-#review{
+#review {
     width: 300px;
     height: 100px;
 }
 
-input[list]{
+input[list] {
     width: 40px;
 }
 
-button{
+button {
     background-color: black;
     color: white;
     height: 40px;
@@ -105,17 +106,17 @@ button{
     border-radius: 4px;
 }
 
-button:hover{
+button:hover {
     background-color: #303030;
     top: 1px;
     position: relative;
 }
 
-img{
+img {
     border-radius: 5px;
 }
 
-sup{
+sup {
     font-size: smaller;
-    color:red;
+    color: red;
 }
