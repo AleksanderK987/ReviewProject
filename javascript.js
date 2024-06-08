@@ -11,14 +11,12 @@ function sendReview() {
         const responseDiv = document.getElementById('response');
         if (data.status === 'success') {
             window.location.reload();
-            // responseDiv.innerHTML = '<p style="color:green;">' + data.message + '</p>';
         } else {
-            responseDiv.innerHTML = '<p style="color:red;">' + data.message + '</p>';
+            alert(data.message);
         }
     })
     .catch(error => {
-        const responseDiv = document.getElementById('response');
-        responseDiv.innerHTML = '<p style="color:red;">An error occurred: ' + error.message + '</p>';
+        alert(error.message);
     });
 }
 
@@ -31,8 +29,8 @@ function deleteReview(id){
         if (data.status === 'success') {
             window.location.reload();
         } else {
-            console.error('Error: ', data.message);
+            alert(data.message);
         }
     })
-    .catch(error => console.error('Error: ', error));
+    .catch(error => alert(error.message));
 }

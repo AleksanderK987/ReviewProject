@@ -49,7 +49,6 @@
                     <button type="button" onClick="window.location.href='login.html'">Log In</button>
                 </form>
             </div>
-            <div id="response"></div>
             <div class="reviewContainer">
                 <?php
                     $dbConnection=new mysqli('localhost', 'root','','reviews');
@@ -58,7 +57,7 @@
                         die("Connection Error: ".$dbConnection->connect_error);
                     }
                     
-                    $query="SELECT * FROM Reviews_table";
+                    $query="SELECT * FROM Reviews_table ORDER BY date DESC, time DESC";
                     $result =$dbConnection->query($query);
 
                     if($result->num_rows>0){
