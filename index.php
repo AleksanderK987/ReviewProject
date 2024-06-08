@@ -4,12 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Review our Radiowęzeł!</title>
-        <script src="javascript.js"> </script>
+        <script src="js/javascript.js"> </script>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="wrapper">
-            <div class="container">
+        <div class="wrapper"> <!-- div to make it easier to control all the content -->
+            <div class="container"> <!-- div in which user can write review  -->
                 <img src="pictures/logo.png" alt="Our logo" width="150" height="150">
                 <h1>Rate Us!</h1>
                 <form id="form">
@@ -49,17 +49,18 @@
                     <button type="button" onClick="window.location.href='login.html'">Log In</button>
                 </form>
             </div>
-            <div class="reviewContainer">
+            <div class="reviewContainer"> <!-- div to show previous reviews -->
                 <?php
+                    // Database connection
                     $dbConnection=new mysqli('localhost', 'root','','reviews');
 
                     if($dbConnection->connect_error){
                         die("Connection Error: ".$dbConnection->connect_error);
                     }
-                    
+                    // Use prepared statements to avoid SQL injection
                     $query="SELECT * FROM Reviews_table ORDER BY date DESC, time DESC";
                     $result =$dbConnection->query($query);
-
+                    // fetching data from the database
                     if($result->num_rows>0){
                         while ($row = $result->fetch_assoc()){
                             $year=substr($row['date'],2,2);
@@ -79,6 +80,7 @@
                     else{
                         echo "No reviews yet.";
                     }
+                    // Close the database connection
                     $dbConnection->close();
                 ?>
             </div>
