@@ -40,7 +40,6 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 else{
     echo "Missing required POST parameters.";
 }
-
+// Close the database connection
 $dbConnection->close();
-
 ?>

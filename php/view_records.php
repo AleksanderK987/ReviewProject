@@ -28,7 +28,11 @@ $result =$dbConnection->query($query);
 
 if($result->num_rows>0){
     echo "<table border='1'>";
-    echo "<tr><th>ID</th><th>Nickname</th><th>Description</th><th>Assortment Rating</th><th>Service Rating</th><th>Decor Rating</th><th>Date</th><th>Time</th></tr>";
+    echo "<tr><th>ID</th><th>Nickname</th>
+        <th>Description</th><th>Assortment Rating</th>
+        <th>Service Rating</th>
+        <th>Decor Rating</th><th>Date</th>
+        <th>Time</th></tr>";
     while ($row = $result->fetch_assoc()){
         echo "<tr>";
         echo "<td>".$row['id']."</td>";
